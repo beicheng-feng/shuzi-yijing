@@ -1,26 +1,25 @@
-# 數字易經分析
+# 數字易經
 
-這是一個 React + Vite 製作的數字易經分析工具。
+這是一個 React 版的數字易經分析工具，已整理成可以上傳到 GitHub 的 Vite 專案。
 
-## 本機執行
+## 本機預覽
 
 ```bash
 npm install
 npm run dev
 ```
 
-開啟終端機顯示的本機網址即可使用。
-
-## 建置
+## 建置正式版
 
 ```bash
 npm run build
 ```
 
-完成後會產生 `dist` 資料夾。
+建置後的檔案會輸出在 `dist` 資料夾。
 
-## 上傳到 GitHub
+## 發布到 GitHub Pages
 
-1. 在 GitHub 建立新的 repository。
-2. 將此資料夾內的檔案上傳到 repository。
-3. 若要部署到 GitHub Pages，可使用 Vite 的 GitHub Pages 部署流程，或把 `dist` 內容部署到 Pages。
+1. 將整個資料夾上傳或推送到 GitHub repository。
+2. 到 repository 的 `Settings` → `Pages`。
+3. 在 `Build and deployment` 選擇 `GitHub Actions`。
+4. 推送到 `main` 分支後，GitHub 會自動建置並發布網站。
