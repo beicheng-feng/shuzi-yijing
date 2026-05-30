@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 // ── 卦象資料庫 ────────────────────────────────────
 const GUAS = {
