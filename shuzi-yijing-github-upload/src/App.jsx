@@ -256,7 +256,12 @@ function calcIdMingPan(rawDigits){
     let isArrow=false,proc="";
     if(r2IsCTZ){ isArrow=true; }
     else if(r1IsCTZ){ proc=processPair("0",r2); }
-    else if(r2IsDel){ proc=processPair(r1,raw[(ri2+1)%rawLen]); }
+    else if(r1IsDel&&r2IsDel){ isArrow=true; }
+    else if(r2IsDel){
+      let nextIdx=(ri2+1)%rawLen, safety=0;
+      while(deleted.has(nextIdx)&&safety++<10) nextIdx=(nextIdx+1)%rawLen;
+      proc=processPair(r1,raw[nextIdx]);
+    }
     else if(r1IsDel){ isArrow=true; }
     else{ proc=processPair(r1,r2); }
     const n=isArrow?null:(parseInt(proc[0])*10+parseInt(proc[1]));
